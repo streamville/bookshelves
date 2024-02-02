@@ -2,7 +2,7 @@ import { useState } from "react";
 import BookEdit from "./BookEdit";
 
 
-function BookShow({ book, onDelete }) {
+function BookShow({ book, onDelete, onEdit }) {
   const [showEdit, setEdit ] = useState();
 
   const handleDeleteClick = () => {
@@ -12,9 +12,14 @@ function BookShow({ book, onDelete }) {
     setEdit(!showEdit);
    }
 
+   const handleSubmit = (id, newTitle) => {
+    setEdit(false);
+    onEdit(id, newTitle)
+   }
+
 let content = <h3>{book.title} </h3>
 if (showEdit){
-  content = <BookEdit />
+  content = <BookEdit onSubmit={handleSubmit} book={book} />
 }
 
 
