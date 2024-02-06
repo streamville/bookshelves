@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "title": "The man who hacked the world",
+      "id": 2
+    },
+    {
+      "title": "Interview with the Vampire",
+      "id": 3
+    },
+    {
+      "title": "Dune",
+      "id": 4
+    },
+    {
+      "title": "Dune 2",
+      "id": 5
+    },
+    {
+      "title": "Letting Go",
+      "id": 6
+    }
+  ]
+}
